@@ -1,0 +1,44 @@
+= Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+== 구성
+
+== 패키지
+
+https://github.com/ParkSB/javascript-style-guide[Airbnb React/JSX Style Guide]
+
+== 활용
+
+=== Language
+
+https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets[React + Typescript CheatSheet]
+
+=== Library
+
+https://ant.design/docs/react/replace-moment[Replacement Moment.js in AntD]
+
+https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[Asciidoc 구문 참조]
+
+== 참조
+
+=== 공식 문서들
+
+* link:https://www.typescriptlang.org/docs/[TypeScript]
+* link:https://atomicdesign.bradfrost.com/table-of-contents/[Atomic Design]
+* link:https://semver.org/lang/ko/[semver]
+
+=== 기타
+
+* link:https://github.com/enaqx/awesome-react[Awsome React]
+* link:https://github.com/denysdovhan/wtfjs/blob/master/README-kr.md[WTF Javascript]
+
+== 문서화
+
+문서 형식은 link:https://docs.asciidoctor.org/asciidoc/latest/document-structure/[Asciidoc]을 사용
+
+== QnA
+
+=== 왜 devdependencies가 분리되어 있지 않나요?
+
+https://github.com/facebook/create-react-app/issues/6180

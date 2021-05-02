@@ -1,11 +1,32 @@
 {
-    "package": {
-      "dependencies": {
-        "eslint-plugin-jsx-a11y": "^6.2.3"
-      },
-      "eslintConfig": {
-        "extends": ["react-app", "plugin:jsx-a11y/recommended"],
-        "plugins": ["jsx-a11y"]
-      }
+  "package": {
+    "dependencies": {
+      "@types/jest": "^26.0.23",
+      "@types/node": "^15.0.1",
+      "@types/react": "^17.0.4",
+      "@types/react-dom": "^17.0.3",
+      "antd": "^4.15.4",
+      "axios": "^0.21.1",
+      "date-fns": "^2.21.1",
+      "eslint-config-airbnb": "^18.2.1",
+      "eslint-config-airbnb-typescript": "^12.3.1",
+      "eslint-config-prettier": "^8.3.0",
+      "node-sass": "^5.0.0",
+      "prettier": "2.2.1",
+      "react-router-dom": "^5.2.0",
+      "recharts": "^2.0.9"
+    },
+    "scripts": {
+      "update-imports": "npx react-codemod update-react-imports"
+    },
+    "eslintConfig": {
+      "extends": [
+        "air-bnb",
+        "airbnb-typescript",
+        "prettier",
+        "react-app",
+        "react-app/jest"
+      ]
     }
   }
+}
