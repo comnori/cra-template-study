@@ -1,22 +1,81 @@
 = Getting Started with Create React App
+Yongsik Yun<comnori@gmail.com>
+v0.1.0, 2021-05-06
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:sectnums: all
+:sectanchors:
+:keywords: kuberntes, k8s OfficeLab, 쿠버네티스, 구축
+:toc: left
+:toc-title: 목차 
+:toclevels: 4
+:source-highlighter: rouge
+:linkcss:
+:icons: font
+:docinfo: shared-head
+
+
+
+This project was bootstrapped with https://github.com/facebook/create-react-app[Create React App]
 
 == 구성
 
-== 패키지
+=== 분석 및 설계
 
-https://github.com/ParkSB/javascript-style-guide[Airbnb React/JSX Style Guide]
+* 왜 이것을 만들었는가?
+** 한번 셋팅된 템플릿을 기준으로 지속적으로 사용
+
+* React 또는 Vue
+* CSS in JS, CSS Module
+* State Management
+** Redux
+** Recoil
+
+.Styleguide
+
+* link:https://github.com/ParkSB/javascript-style-guide[Airbnb React/JSX Style Guide]
+
+.CSS
+
+* `Antd` 는 `LESS` 사용
+* `SASS` 의 채택율이 높고 CRA에서 `SASS` 또는 `Post CSS` 가이드만 제공
+
+.HTTP Request
+
+* Axios or Fetch
+** link:https://blog.logrocket.com/axios-or-fetch-api/[Axios or fetch(): Which should you use?]
+
+.Date
+
+* `Moment.js`는 큰 번들 사이즈 및 성능 이슈로 인하여 link:https://date-fns.org/[DateFns]사용
+** link:https://github.com/you-dont-need/You-Dont-Need-Momentjs[You don't (may not) need Moment.js] 참조
+
+=== 개발
+
+.IDE
+* Visual Studio Code
++
+.extension
+** fdsafdsa
+
+=== 테스트
+
+=== 빌드
+
+=== 배포
 
 == 활용
 
-=== Language
+=== React
 
-https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets[React + Typescript CheatSheet]
+https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets[React+TypeScript Cheatsheets]
 
-=== Library
+=== Typescript
+
+=== AntD
 
 https://ant.design/docs/react/replace-moment[Replacement Moment.js in AntD]
+
+=== Asciidoc
 
 https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[Asciidoc 구문 참조]
 
@@ -39,6 +98,17 @@ https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[Asciidoc �
 
 == QnA
 
-=== 왜 devdependencies가 분리되어 있지 않나요?
+[qanda]
+왜 Markdown이 아닌 Asciidoc을 사용하나요?::
+* Github에서 Asciidoc을 지원
+* Markdown 대비 다양하고 간결한 구문 지원
+* link:https://docs.asciidoctor.org/asciidoc/latest/asciidoc-vs-markdown/[Markdown 과 Asciidoc 비교]
 
-https://github.com/facebook/create-react-app/issues/6180
+왜 devdependencies가 분리되어 있지 않나요?::
+* Node App이 아닌 이상 런타임으로 구동되기 때문에 분리의 의미가 없고 빌드의 문제성을 최소화하기 위해서 dependencies만 사용
++
+.Everything goes into dependencies? link:https://github.com/facebook/create-react-app/issues/6180[Issue 링크]
+[quote, gaearon commented on 12 Jan 2019]
+Node 앱은 실제로 런타임으로 배포되기 때문에 구별이 의미가 있습니다. 따라서 개발 종속성을 배포하고 싶지 않을 수 있습니다. +
+CRA의 경우 최종 결과는 정적 번들입니다. 따라서 어떤 의미에서 모든 종속성은 "개발 종속성"이며 React 또는 사용하는 라이브러리도 마찬가지입니다. 빌드시에만 사용됩니다. +
+그러나 모든 것을 빌드 종속성에 넣으면 서버에서 초기 빌드를 수행하는 일부 배포 스크립트가 손상 될 수 있습니다. 따라서 모든 것을 일반 종속성에 넣는 것이 더 쉽습니다.
