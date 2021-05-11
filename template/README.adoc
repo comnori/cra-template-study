@@ -13,8 +13,6 @@ v0.1.0, 2021-05-06
 :icons: font
 :docinfo: shared-head
 
-
-
 This project was bootstrapped with https://github.com/facebook/create-react-app[Create React App]
 
 == 구성
@@ -38,10 +36,12 @@ This project was bootstrapped with https://github.com/facebook/create-react-app[
 
 * `Antd` 는 `LESS` 사용
 * `SASS` 의 채택율이 높고 CRA에서 `SASS` 또는 `Post CSS` 가이드만 제공
+** link:https://create-react-app.dev/docs/adding-a-sass-stylesheet[SASS]
+** link:https://create-react-app.dev/docs/post-processing-css[LESS]
 
-.HTTP Request
+.Request
 
-* Axios or Fetch
+* Axios 사용
 ** link:https://blog.logrocket.com/axios-or-fetch-api/[Axios or fetch(): Which should you use?]
 
 .Date
