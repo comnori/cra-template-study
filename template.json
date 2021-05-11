@@ -30,12 +30,15 @@
     },
     "eslintConfig": {
       "extends": [
-        "air-bnb",
+        "airbnb",
         "airbnb-typescript",
         "prettier",
         "react-app",
         "react-app/jest"
-      ]
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      }
     }
   }
 }
