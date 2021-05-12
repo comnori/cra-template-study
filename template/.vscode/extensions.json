@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "asciidoctor.asciidoctor-vscode",
+        "msjsdiag.debugger-for-chrome",
+        "mikestead.dotenv",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode"
+    ]
+}

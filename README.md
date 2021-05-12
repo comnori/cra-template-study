@@ -6,8 +6,5 @@
 별도로 구성된 `react-script`와 혼합하여 사용해야만 합니다.
 
 ```sh
-npx create-react-app my-app --scripts-version=comnori-react-scripts --template comnori
+npx create-react-app my-app --scripts-version comnori-react-scripts --template comnori
 ```
-
-왜 Eject 해서 사용하지 않나요?
-https://github.com/facebook/create-react-app/issues/682
