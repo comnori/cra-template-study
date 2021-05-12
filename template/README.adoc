@@ -13,20 +13,21 @@ v0.1.0, 2021-05-06
 :icons: font
 :docinfo: shared-head
 
-This project was bootstrapped with https://github.com/facebook/create-react-app[Create React App]
+This project was bootstrapped with https://github.com/comnori/create-react-app[Create React App]
+
+프로젝트를 진행함에 있어 자주 사용한 검증된 라이브러리와 자동화된 개발환경 구축을 위해 작성됨
+
+[source, shell, numbered]
+----
+npx create-react-app my-app --scripts-version comnori-react-scripts --template comnori
+----
 
 == 구성
 
 === 분석 및 설계
 
-* 왜 이것을 만들었는가?
-** 한번 셋팅된 템플릿을 기준으로 지속적으로 사용
-
-* React 또는 Vue
-* CSS in JS, CSS Module
-* State Management
-** Redux
-** Recoil
+.Folder 구조
+Create React App기반과 Atomic Design 기반을 혼용하여 사용
 
 .Styleguide
 
@@ -36,8 +37,8 @@ This project was bootstrapped with https://github.com/facebook/create-react-app[
 
 * `Antd` 는 `LESS` 사용
 * `SASS` 의 채택율이 높고 CRA에서 `SASS` 또는 `Post CSS` 가이드만 제공
-** link:https://create-react-app.dev/docs/adding-a-sass-stylesheet[SASS]
-** link:https://create-react-app.dev/docs/post-processing-css[LESS]
+** link:https://create-react-app.dev/docs/adding-a-sass-stylesheet[Adding a Sass Stylesheet]
+** link:https://create-react-app.dev/docs/post-processing-css[Post-Processing CSS]
 
 .Request
 
@@ -46,20 +47,44 @@ This project was bootstrapped with https://github.com/facebook/create-react-app[
 
 .Date
 
-* `Moment.js`는 큰 번들 사이즈 및 성능 이슈로 인하여 link:https://date-fns.org/[DateFns]사용
+* `Moment.js` 는 큰 번들 사이즈 및 성능 이슈로 인하여 link:https://date-fns.org/[DateFns]사용
 ** link:https://github.com/you-dont-need/You-Dont-Need-Momentjs[You don't (may not) need Moment.js] 참조
 
 === 개발
 
 .IDE
-* Visual Studio Code
+* link:https://code.visualstudio.com/[Visual Studio Code] + 
+필수 확장 프로그램은 `.vscode/extension.json` 에 정의되어 있음
 +
-.extension
-** fdsafdsa
+--
+.필수 확장
+** link:https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint[ESlint]
+** link:https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode[Prettier]
+** link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc]
+** link:https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome[Debugger for Chrome]
+** link:https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv[DotENV]
+--
++
+--
+.옵션 확장
+** link:https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer[Bracket Pair Colorizer]
+** link:https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow[indent-rainbow]
+--
 
 === 테스트
 
+.Browser
+* Chrome Browser
++
+.필수 확장
+** link:https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma:[Web Vitals]
+** link:https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi[React Developer Tools]
+** link:https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd[Redux DevTools]
+
 === 빌드
+
+.사용자 지정 환경 변수
+* link:https://create-react-app.dev/docs/adding-custom-environment-variables/[React App 만들기#사용자 지정 변수]
 
 === 배포
 
