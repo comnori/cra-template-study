@@ -26,19 +26,7 @@
       "web-vitals": "^1.0.1"
     },
     "scripts": {
-      "update-imports": "npx react-codemod update-react-imports"
-    },
-    "eslintConfig": {
-      "extends": [
-        "airbnb",
-        "airbnb-typescript",
-        "prettier",
-        "react-app",
-        "react-app/jest"
-      ],
-      "parserOptions": {
-        "project": "./tsconfig.json"
-      }
+      "update-react-imports": "npx react-codemod update-react-imports"
     }
   }
 }

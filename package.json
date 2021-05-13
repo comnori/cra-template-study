@@ -7,7 +7,7 @@
     "template",
     "study"
   ],
-  "description": "Create React App 템플릿을 활용한 공부용 베이스",
+  "description": "Custom Create React App Template",
   "repository": {
     "type": "git",
     "url": "https://github.com/comnori/cra-template-study.git"

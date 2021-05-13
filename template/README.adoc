@@ -13,14 +13,9 @@ v0.1.0, 2021-05-06
 :icons: font
 :docinfo: shared-head
 
-This project was bootstrapped with https://github.com/comnori/create-react-app[Create React App]
+This project was bootstrapped with https://github.com/comnori/create-react-app[Custom Create React App]
 
 프로젝트를 진행함에 있어 자주 사용한 검증된 라이브러리와 자동화된 개발환경 구축을 위해 작성됨
-
-[source, shell, numbered]
-----
-npx create-react-app my-app --scripts-version comnori-react-scripts --template comnori
-----
 
 == 구성
 
@@ -52,6 +47,8 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 
 === 개발
 
+==== 개발 환경
+
 .IDE
 * link:https://code.visualstudio.com/[Visual Studio Code] + 
 필수 확장 프로그램은 `.vscode/extension.json` 에 정의되어 있음
@@ -63,6 +60,7 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 ** link:https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[AsciiDoc]
 ** link:https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome[Debugger for Chrome]
 ** link:https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv[DotENV]
+** link:https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets[Ant Design Snippets]
 --
 +
 --
@@ -71,13 +69,29 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 ** link:https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow[indent-rainbow]
 --
 
+.형상관리
+* link:https://www.sourcetreeapp.com/[SourceTree]
+** Windows / Mac
+* link:https://gitahead.github.io/gitahead.com/[GitAhead]
+** Windows / Mac / Linux
+
+==== Available Scripts
+
+프로젝트 디렉토리에서 다음을 실행할 수 있습니다.
+
+[source, shell, numbered]
+----
+yarn update-react-imports <1>
+----
+<1> link:https://ko.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html[Introducing the New JSX Transform]
+
 === 테스트
 
 .Browser
 * Chrome Browser
 +
 .필수 확장
-** link:https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma:[Web Vitals]
+** link:https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma[Web Vitals]
 ** link:https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi[React Developer Tools]
 ** link:https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd[Redux DevTools]
 
@@ -87,6 +101,9 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 * link:https://create-react-app.dev/docs/adding-custom-environment-variables/[React App 만들기#사용자 지정 변수]
 
 === 배포
+
+.패키지 버전 관리
+* link:https://semver.org/lang/ko/[semver] 형식에 따름
 
 == 활용
 
@@ -115,6 +132,7 @@ https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[Asciidoc �
 === 기타
 
 * link:https://github.com/enaqx/awesome-react[Awsome React]
+* link:https://github.com/websemantics/awesome-ant-design[Awsome AntD]
 * link:https://github.com/denysdovhan/wtfjs/blob/master/README-kr.md[WTF Javascript]
 
 == 문서화
@@ -132,8 +150,17 @@ https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[Asciidoc �
 왜 devdependencies가 분리되어 있지 않나요?::
 * Node App이 아닌 이상 런타임으로 구동되기 때문에 분리의 의미가 없고 빌드의 문제성을 최소화하기 위해서 dependencies만 사용
 +
+--
 .Everything goes into dependencies? link:https://github.com/facebook/create-react-app/issues/6180[Issue 링크]
 [quote, gaearon commented on 12 Jan 2019]
 Node 앱은 실제로 런타임으로 배포되기 때문에 구별이 의미가 있습니다. 따라서 개발 종속성을 배포하고 싶지 않을 수 있습니다. +
 CRA의 경우 최종 결과는 정적 번들입니다. 따라서 어떤 의미에서 모든 종속성은 "개발 종속성"이며 React 또는 사용하는 라이브러리도 마찬가지입니다. 빌드시에만 사용됩니다. +
 그러나 모든 것을 빌드 종속성에 넣으면 서버에서 초기 빌드를 수행하는 일부 배포 스크립트가 손상 될 수 있습니다. 따라서 모든 것을 일반 종속성에 넣는 것이 더 쉽습니다.
+--
+
+== 문제해결
+
+[qanda]
+`.tsx` 파일에서 오류가 발생합니다.::
+해당 템플릿은 별도로 제작한 https://github.com/comnori/create-react-app[Custom Create React App]을 기반으로 작성되었습니다. +
+`src\react-app-env.d.ts` 파일의 `reference types`의 값과 `package.json`의 depencency 패키지의 이름이 같아야 합니다.
