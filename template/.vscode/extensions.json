@@ -5,6 +5,7 @@
         "mikestead.dotenv",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "bang.antd-snippets"
+        "bang.antd-snippets",
+        "paulshen.paul-typescript-toolkit"
     ]
 }

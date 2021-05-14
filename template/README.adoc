@@ -63,6 +63,7 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 ** link:https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome[Debugger for Chrome]
 ** link:https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv[DotENV]
 ** link:https://marketplace.visualstudio.com/items?itemName=bang.antd-snippets[Ant Design Snippets]
+** link:https://marketplace.visualstudio.com/items?itemName=paulshen.paul-typescript-toolkit[paul-typescript-toolkit]
 --
 +
 --
@@ -111,19 +112,23 @@ yarn update-react-imports <1>
 
 == 활용
 
+=== Javascript
+
+* https://dmitripavlutin.com/javascript-object-destructuring/[javascript-object-destructuring]
+
 === React
 
-https://github.com/typescript-cheatsheets/react#reacttypescript-cheatsheets[React+TypeScript Cheatsheets]
+* https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example[React+TypeScript Cheatsheets]
 
 === Typescript
 
 === AntD
 
-https://ant.design/docs/react/replace-moment[Replacement Moment.js in AntD]
+* https://ant.design/docs/react/replace-moment[Replacement Moment.js in AntD]
 
 === Asciidoc
 
-https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[Asciidoc 구문 참조]
+* https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/[Asciidoc 구문 참조]
 
 == 참조
 

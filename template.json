@@ -17,6 +17,7 @@
       "eslint-config-prettier": "^8.3.0",
       "node-sass": "^5.0.0",
       "prettier": "2.2.1",
+      "rc-picker": "^2.5.10",
       "react-router-dom": "^5.2.0",
       "recharts": "^2.0.9",
       "react-redux": "^7.2.3",
