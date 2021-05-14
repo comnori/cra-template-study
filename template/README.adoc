@@ -5,7 +5,7 @@ v0.1.0, 2021-05-06
 :sectnums: all
 :sectanchors:
 :keywords: kuberntes, k8s OfficeLab, 쿠버네티스, 구축
-:toc: left
+:toc: macro
 :toc-title: 목차 
 :toclevels: 4
 :source-highlighter: rouge
@@ -16,6 +16,8 @@ v0.1.0, 2021-05-06
 This project was bootstrapped with https://github.com/comnori/create-react-app[Custom Create React App]
 
 프로젝트를 진행함에 있어 자주 사용한 검증된 라이브러리와 자동화된 개발환경 구축을 위해 작성됨
+
+toc::[]
 
 == 구성
 
@@ -104,6 +106,8 @@ yarn update-react-imports <1>
 
 .패키지 버전 관리
 * link:https://semver.org/lang/ko/[semver] 형식에 따름
+* link:https://www.slideshare.net/JakeGinnivan/sem-ver-the-whole-story[Git branch 전략과 Semver]
+
 
 == 활용
 
