@@ -1,25 +1,17 @@
-import './styles/App.css';
+import { ConfigProvider } from "antd";
+import "antd/dist/antd.css";
+import ko_KR from "antd/es/locale/ko_KR";
+import Homepage from "components/pages/Homepage";
+import "./styles/App.css";
+
+ko_KR.DatePicker!.lang.locale = "ko";
 
 function App() {
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={`${process.env.PUBLIC_URL}/images/logo.svg`} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ConfigProvider locale={ko_KR}>
+			<Homepage />;
+		</ConfigProvider>
+	);
 }
 
 export default App;
