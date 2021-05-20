@@ -47,6 +47,14 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 * `Moment.js` 는 큰 번들 사이즈 및 성능 이슈로 인하여 link:https://date-fns.org/[DateFns]사용
 ** link:https://github.com/you-dont-need/You-Dont-Need-Momentjs[You don't (may not) need Moment.js] 참조
 
+.Utility
+
+* link:https://lodash.com/[Lodash] 사용
+** 순수 자바스크립트의 경우 개발자 개개인 마다 사용하는 방법이 다르기 때문에 `lodash`를 통해서 일괄적으로 성능 보장
+** link:https://blog.bitsrc.io/you-dont-need-lodash-or-how-i-started-loving-javascript-functions-3f45791fa6cd[Pure JavaScript Functions as a 
+Replacement for Lodash]
+** link:https://www.google.com/search?q=lodash+benchmark+site%3Ameasurethat.net&newwindow=1&sxsrf=ALeKk004N_B3gK34ZXNYj0JJcEGt5KgsEg%3A1621245355557&ei=qz2iYPq6IYLTmAWf246gAg&oq=lodash+benchmark+site%3Ameasurethat.net&gs_lcp=Cgdnd3Mtd2l6EANQwBtYmCVgliZoAXAAeACAAX6IAZQJkgEEMC4xMJgBAKABAaoBB2d3cy13aXrAAQE&sclient=gws-wiz&ved=0ahUKEwi6vIvMudDwAhWCKaYKHZ-tAyQQ4dUDCA4&uact=5[Lodash Benchmark] 를 확인하여 성능이 부족한 부분만 `Pure Javascript Function`을 사용한 것을 추천
+
 === 개발
 
 ==== 개발 환경
@@ -112,18 +120,38 @@ yarn update-react-imports <1>
 
 == 활용
 
+해당 되는 모든 기술은 첫번째로 Reference 문서를 참조하여 진행한다.
+Reference 문서가 이해가 되지 않을 경우에 `Stackoverflow`, `velopert` 와 같은 `Blog` 를 참조할 것
+
+=== HTML/CSS
+
+* https://www.w3schools.com/[w3school]
+** https://www.w3schools.com/html/default.asp[HTML]
+** https://www.w3schools.com/css/default.asp[CSS]
+
 === Javascript
 
+* https://www.w3schools.com/js/default.asp[w3school/Javascript]
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript[MDN]
 * https://dmitripavlutin.com/javascript-object-destructuring/[javascript-object-destructuring]
 
 === React
 
+* https://ko.reactjs.org/docs/getting-started.html[React]
 * https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example[React+TypeScript Cheatsheets]
 
 === Typescript
 
+* link:https://www.typescriptlang.org/docs/[TypeScript]
+* link:https://tsdoc.org/[TSDoc]
+
+=== SASS
+
+* link:https://sass-lang.com/documentation[SASS]
+
 === AntD
 
+* https://ant.design/components/overview/[Ant Design]
 * https://ant.design/docs/react/replace-moment[Replacement Moment.js in AntD]
 
 === Asciidoc
@@ -134,7 +162,6 @@ yarn update-react-imports <1>
 
 === 공식 문서들
 
-* link:https://www.typescriptlang.org/docs/[TypeScript]
 * link:https://atomicdesign.bradfrost.com/table-of-contents/[Atomic Design]
 * link:https://semver.org/lang/ko/[semver]
 
@@ -146,7 +173,8 @@ yarn update-react-imports <1>
 
 == 문서화
 
-문서 형식은 link:https://docs.asciidoctor.org/asciidoc/latest/document-structure/[Asciidoc]을 사용
+* 기본적인 문서 형식은 link:https://docs.asciidoctor.org/asciidoc/latest/document-structure/[Asciidoc]을 사용
+* link:https://tsdoc.org/[TSDoc]
 
 == QnA
 
@@ -173,3 +201,15 @@ CRA의 경우 최종 결과는 정적 번들입니다. 따라서 어떤 의미�
 `.tsx` 파일에서 오류가 발생합니다.::
 해당 템플릿은 별도로 제작한 https://github.com/comnori/create-react-app[Custom Create React App]을 기반으로 작성되었습니다. +
 `src\react-app-env.d.ts` 파일의 `reference types`의 값과 `package.json`의 depencency 패키지의 이름이 같아야 합니다.
+
+오래된 `javascript` 모듈 사용시 `Cannot find module <라이브러리명> or its corresponding type declarations.ts(2307)` 발생::
+`src\react-app-env.d.ts` 파일 내부에 모듈 등록 후 사용하세요.
++
+--
+[source, typescript, numbered]
+----
+declare module <라이브러리명>;
+----
+--
+
+
