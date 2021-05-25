@@ -1,7 +1,7 @@
 import { Breadcrumb, Col, Row } from "antd";
 import HomepageFooter from "components/organisms/HomepageFooter";
 import HomepageHeader from "components/organisms/HomepageHeader";
-import BasicLayout from "components/templates/BasicLayout/BasicLayout";
+import BasicLayout from "components/templates/BasicLayout";
 
 function Homepage() {
 	return (

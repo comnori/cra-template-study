@@ -133,6 +133,7 @@ Reference 문서가 이해가 되지 않을 경우에 `Stackoverflow`, `velopert
 
 * https://www.w3schools.com/js/default.asp[w3school/Javascript]
 * https://developer.mozilla.org/en-US/docs/Web/JavaScript[MDN]
+* https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment[MDN:Destructuring_assignment]
 * https://dmitripavlutin.com/javascript-object-destructuring/[javascript-object-destructuring]
 
 === React
@@ -212,4 +213,7 @@ declare module <라이브러리명>;
 ----
 --
 
+`findDOMNode is deprecated in StrictMode.` 경고가 표시됩니다.::
+해당 경고는 `React 17` 과 `AntD 4.15.x` 버전과의 문제로 향후 `AntD` 버전 업데이트로 해결됩니다. +
+link:https://github.com/ant-design/ant-design/issues/26136[관련 이슈:React 17 and StrictMode support]
 
