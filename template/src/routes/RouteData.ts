@@ -6,6 +6,7 @@ export enum ItemType {
 	RouteWithMenuItem,
 	MenuItemGroup,
 	SubMenuItem,
+	RouteItem,
 }
 
 interface DefaultTypes {
@@ -14,9 +15,13 @@ interface DefaultTypes {
 	readonly icon?: ReactNode;
 }
 
-export interface RouteWithMenuItem extends DefaultTypes {
+export interface RouteItem extends DefaultTypes {
 	readonly linkTo: string;
 	readonly component: ReactNode;
+}
+
+export interface RouteWithMenuItem extends RouteItem {
+	key?: string;
 }
 
 export interface MenuItemGroup extends DefaultTypes {
@@ -25,7 +30,7 @@ export interface MenuItemGroup extends DefaultTypes {
 }
 
 export interface SubMenuItem extends MenuItemGroup {
-	readonly key: string;
+	key?: string;
 	readonly context: string;
 	readonly itemGroup?: MenuItemGroup;
 }
@@ -45,7 +50,6 @@ const RouteWithMenuItemsData: Array<RouteWithMenuItem | SubMenuItem> = [
 	{
 		type: ItemType.SubMenuItem,
 		title: "회사 소개",
-		key: "CompanyInfo",
 		context: "/company-info",
 		items: [
 			{
@@ -63,41 +67,26 @@ const RouteWithMenuItemsData: Array<RouteWithMenuItem | SubMenuItem> = [
 			{
 				type: ItemType.RouteWithMenuItem,
 				title: "회사연혁",
-				linkTo: "/company-history",
+				linkTo: "/history",
 				component: Homepage,
 			},
 			{
-				type: ItemType.SubMenuItem,
-				title: "회사 소개2222",
-				key: "CompanyInfo2",
-				context: "/company-info",
-				items: [
-					{
-						type: ItemType.RouteWithMenuItem,
-						title: "비전",
-						linkTo: "/vision",
-						component: Homepage,
-					},
-					{
-						type: ItemType.RouteWithMenuItem,
-						title: "기업윤리",
-						linkTo: "/business-ethics",
-						component: Homepage,
-					},
-					{
-						type: ItemType.RouteWithMenuItem,
-						title: "회사연혁",
-						linkTo: "/company-history",
-						component: Homepage,
-					},
-				],
+				type: ItemType.RouteItem,
+				title: "연도별 회사연혁",
+				linkTo: "/history/:year",
+				component: Homepage,
+			},
+			{
+				type: ItemType.RouteItem,
+				title: "연도별 회사연혁",
+				linkTo: "/history/:year/:id",
+				component: Homepage,
 			},
 		],
 	},
 	{
 		type: ItemType.SubMenuItem,
 		title: "사업 소개",
-		key: "BussinessInfo",
 		context: "/bussiness-info",
 		itemGroup: {
 			type: ItemType.MenuItemGroup,

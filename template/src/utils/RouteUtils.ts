@@ -4,6 +4,7 @@ import traverse, { TraverseContext } from "traverse";
 
 const RouteUtils = {
 	exportRouteItems,
+	appendContextLink,
 };
 
 /**
@@ -12,10 +13,13 @@ const RouteUtils = {
  * @returns
  */
 function exportRouteWithMenuItem(routeWithMenuItemsData: any) {
-	// traverse 함수의 this를 사용하기 위해서 화살 함수를 사용할 수 없으며 eslint disable
+	/**
+	 * traverse 함수의 this를 사용하기 위해서 화살 함수를 사용할 수 없으며 eslint disable
+	 *
+	 * */
 	// eslint-disable-next-line func-names
 	const leaves = traverse(routeWithMenuItemsData).reduce(function (acc, x) {
-		if (x.type === ItemType.RouteWithMenuItem) {
+		if (x.type === ItemType.RouteWithMenuItem || x.type === ItemType.RouteItem) {
 			acc.push({ ...x, linkTo: appendContextLink(this.parent!, x.linkTo) });
 		}
 		return acc;

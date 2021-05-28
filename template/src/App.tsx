@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import ko_KR from "antd/es/locale/ko_KR";
 import _ from "lodash";
 import Exception, { ExceptionType } from "pages/Exception";
+import { Suspense } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import RouteWithMenuItemsData from "routes/RouteData";
 import RouteUtils from "utils/RouteUtils";
@@ -35,7 +36,9 @@ function App() {
 	return (
 		<ConfigProvider locale={ko_KR}>
 			<Router>
-				<Switch>{routes}</Switch>
+				<Suspense fallback={<Exception type={ExceptionType.Loading} />}>
+					<Switch>{routes}</Switch>
+				</Suspense>
 			</Router>
 		</ConfigProvider>
 	);
