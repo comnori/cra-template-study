@@ -32,7 +32,7 @@ npx create-react-app my-app --scripts-version comnori-react-scripts --template c
 * `Moment.js` 제거 및 `date-fns` 사용하는 AntD `Calendar`, `DatePicker`, `TimePicker` 제공
 ## TODO
 
-[] Ant Design Theme Changer
-[] Add Craco
-[] Add Lodash Webpack Plugin
-[] Add NonTS Template 
+- [ ] Ant Design Theme Changer
+- [ ] Add Craco
+- [ ] Add Lodash Webpack Plugin
+- [ ] Add NonTS Template 
