@@ -33,7 +33,4 @@ npx create-react-app my-app --scripts-version comnori-react-scripts --template c
 ## TODO
 
 - [ ] Ant Design Theme Changer
-- [ ] Add Craco
-- [ ] Add Lodash Webpack Plugin
-- [ ] Add NonTS Template
 - [ ] Add Husky

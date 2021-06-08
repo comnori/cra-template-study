@@ -1,6 +1,6 @@
 = Getting Started with Create React App
 Yongsik Yun<comnori@gmail.com>
-v0.1.0, 2021-05-06
+v0.1.1, 2021-06-02
 
 :sectnums: all
 :sectanchors:
@@ -36,6 +36,8 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 * `SASS` 의 채택율이 높고 CRA에서 `SASS` 또는 `Post CSS` 가이드만 제공
 ** link:https://create-react-app.dev/docs/adding-a-sass-stylesheet[Adding a Sass Stylesheet]
 ** link:https://create-react-app.dev/docs/post-processing-css[Post-Processing CSS]
+* Global Style은 `src/styles` 에 작성
+* 각 페이지별 Style은 module sass 사용
 
 .Request
 
@@ -54,6 +56,8 @@ Create React App기반과 Atomic Design 기반을 혼용하여 사용
 ** link:https://blog.bitsrc.io/you-dont-need-lodash-or-how-i-started-loving-javascript-functions-3f45791fa6cd[Pure JavaScript Functions as a 
 Replacement for Lodash]
 ** link:https://www.google.com/search?q=lodash+benchmark+site%3Ameasurethat.net&newwindow=1&sxsrf=ALeKk004N_B3gK34ZXNYj0JJcEGt5KgsEg%3A1621245355557&ei=qz2iYPq6IYLTmAWf246gAg&oq=lodash+benchmark+site%3Ameasurethat.net&gs_lcp=Cgdnd3Mtd2l6EANQwBtYmCVgliZoAXAAeACAAX6IAZQJkgEEMC4xMJgBAKABAaoBB2d3cy13aXrAAQE&sclient=gws-wiz&ved=0ahUKEwi6vIvMudDwAhWCKaYKHZ-tAyQQ4dUDCA4&uact=5[Lodash Benchmark] 를 확인하여 성능이 부족한 부분만 `Pure Javascript Function`을 사용한 것을 추천
+** Bundle Size 문제는 향후 https://github.com/comnori/create-react-app[Custom Create React App] 에서 `lodash-webpack-plugin` 을 적용하여 해결 예정
+*** link:https://www.blazemeter.com/blog/the-correct-way-to-import-lodash-libraries-a-benchmark[The Correct Way to Import Lodash Libraries]
 
 === 개발
 
@@ -171,6 +175,7 @@ Reference 문서가 이해가 되지 않을 경우에 `Stackoverflow`, `velopert
 * link:https://github.com/enaqx/awesome-react[Awsome React]
 * link:https://github.com/websemantics/awesome-ant-design[Awsome AntD]
 * link:https://github.com/denysdovhan/wtfjs/blob/master/README-kr.md[WTF Javascript]
+* link:https://github.com/qkraudghgh/clean-code-javascript-ko[clean-code-javascript]
 
 == 문서화
 
